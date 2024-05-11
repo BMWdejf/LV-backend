@@ -6,3 +6,4 @@ django-tables2
 pillow
 graphene-django
 django-crontab
+requests
