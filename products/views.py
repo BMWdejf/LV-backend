@@ -23,7 +23,7 @@ def get_flexibee_data(start_id=1, end_id=100):
 
             if not existing_record and export_on_eshop:
                 # Přidat záznam, pokud neexistuje a exportNaEshop je true
-                Flexibee.objects.create(
+                Products.objects.create(
                     fx_id=row['id'],
                     code=row['kod'],
                     name=row['nazev'],
