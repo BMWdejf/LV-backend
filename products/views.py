@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from products.models import Products
 import requests
 from os import getenv
@@ -53,3 +54,8 @@ def get_flexibee_data(start_id=1, end_id=100):
                 )
         print(f"Data from {id}.json saved to database")
 
+=======
+from django.shortcuts import render
+
+# Create your views here.
+>>>>>>> 328f7f1 (Install clean Django app "Products")
