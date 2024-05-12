@@ -18,6 +18,7 @@ from django.urls import path, include
 from products import views
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
     path("flexibee/", views.index, name="flexibee"),
+    path("", admin.site.urls),
+
 ]
