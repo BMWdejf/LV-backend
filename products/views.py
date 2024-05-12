@@ -1,12 +1,12 @@
 import requests
-from os import getenv
 from django.http.response import HttpResponse
 from .tasks import fetch_data_from_flexibee_api
+import os
 
 
 
 async def index(request):
-    auth = (getenv("FLEXB_USER"), getenv("FLEXB_PASS"))
+    auth = (os.getenv("FLEXB_USER"), os.getenv("FLEXB_PASS"))
     response = requests.get("https://sas-technologi.flexibee.eu:5434/c/einteriors_s_r_o_/cenik.json?detail=custom:id&limit=1&order=id@D", auth=auth)
     data = response.json()['winstrom']['cenik']
 
