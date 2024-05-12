@@ -4,7 +4,8 @@ from django.db import models
 # Create your models here.
 =======
 class Products(models.Model):
-    code = models.CharField(max_length=150)
+    fx_id = models.IntegerField(unique=True)
+    code = models.CharField(max_length=150, unique=True)
     name = models.CharField(max_length=255)
     img_link = models.CharField(max_length=255)
     export_on_eshop = models.BooleanField(default=False)
