@@ -1,8 +1,5 @@
 from django.db import models
 
-<<<<<<< HEAD
-# Create your models here.
-=======
 class Products(models.Model):
     fx_id = models.IntegerField(unique=True)
     code = models.CharField(max_length=150, unique=True)
@@ -12,4 +9,3 @@ class Products(models.Model):
 
     def __str__(self):
         return self.name
->>>>>>> origin/products_services
