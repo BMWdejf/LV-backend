@@ -2,8 +2,10 @@ import requests
 from django.http.response import HttpResponse
 from .tasks import fetch_data_from_flexibee_api
 import os
+from dotenv import load_dotenv
 
-
+# Load environment variables
+load_dotenv()
 
 async def index(request):
     auth = (os.getenv("FLEXB_USER"), os.getenv("FLEXB_PASS"))
