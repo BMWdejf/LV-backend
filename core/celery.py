@@ -1,5 +1,5 @@
 import os
-from core.celery import Celery
+from celery import Celery
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings')
 app = Celery('products')
