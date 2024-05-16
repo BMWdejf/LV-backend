@@ -21,7 +21,7 @@ async def index(request):
     return HttpResponse("Urls sent")
 
 def add_task(request):
-    result = add.delay(2, 3)
+    result = add.delay(2, 4)
 
     try:
         result_value = result.get(timeout=10)
