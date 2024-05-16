@@ -19,6 +19,7 @@ from products import views
 
 urlpatterns = [
     path("flexibee/", views.index, name="flexibee"),
+    path("add/", views.add_task, name="add"),
     path("", admin.site.urls),
 
 ]

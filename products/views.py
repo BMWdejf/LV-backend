@@ -1,6 +1,6 @@
 import requests
 from django.http.response import HttpResponse
-from .tasks import fetch_data_from_flexibee_api
+from .tasks import fetch_data_from_flexibee_api, add
 import os
 from dotenv import load_dotenv
 
@@ -19,3 +19,13 @@ async def index(request):
         fetch_data_from_flexibee_api.delay(url)
 
     return HttpResponse("Urls sent")
+
+def add_task(request):
+    result = add.delay(int(os.getenv("X")), int(os.getenv("Y")))
+
+    try:
+        result_value = result.get(timeout=10)
+    except TimeoutError:
+        result_value = "Timed out"
+
+    return HttpResponse(result_value)

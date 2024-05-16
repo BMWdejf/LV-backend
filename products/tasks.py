@@ -36,3 +36,7 @@ def fetch_data_from_flexibee_api(url):
 
     except (KeyError, requests.exceptions.RequestException) as e:
         print(e)
+
+@shared_task()
+def add(x, y):
+    return x * y
