@@ -140,3 +140,6 @@ MEDIA_URL = '/img/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Celery broker URL
+CELERY_BROKER_URL = os.getenv("CELERY_BROKER_URL")
